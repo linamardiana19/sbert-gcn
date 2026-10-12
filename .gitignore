@@ -1,0 +1,15 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+
+# Dataset contents are ignored via dataset/.gitignore
+
+# Model weights and artifacts (keep folders, ignore contents)
+checkpoints/*
+!checkpoints/.gitkeep
+results/*
+!results/.gitkeep
+models/*
+!models/.gitkeep
