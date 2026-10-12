@@ -1,6 +1,6 @@
 # SBERT+GCN Extractive Summarization
 
-Extractive text summarization untuk berita Bahasa Indonesia menggunakan **Sentence-BERT** (SBERT) sebagai sentence encoder dan **Graph Convolutional Network** (GCN) untuk inter-sentence reasoning pada dataset **XL-Sum**.
+Extractive text summarization untuk berita Bahasa Indonesia menggunakan **Sentence-BERT** (SBERT) sebagai sentence encoder dan **Graph Convolutional Network** (GCN) untuk inter-sentence reasoning pada dataset **XL-Sum & Liputan6**.
 
 ## Arsitektur
 
