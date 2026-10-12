@@ -15,18 +15,6 @@ Dokumen → Sentence Splitting → SBERT Encoder (frozen) → Graph Construction
 - **Scoring Head** — MLP 2-layer menghasilkan skor kepentingan per kalimat.
 - **Sentence Selection** — Top-K (k=2) dengan trigram blocking untuk menghindari redundansi.
 
-## Hasil
-
-| Metode | ROUGE-1 | ROUGE-2 | ROUGE-L |
-|--------|---------|---------|---------|
-| Oracle (upper bound) | 0.3660 | 0.1306 | 0.2505 |
-| **SBERT+GCN (k=2)** | **0.2368** | **0.0749** | **0.1773** |
-| Lead-2 | 0.2189 | 0.0641 | 0.1621 |
-| Lead-1 | 0.2119 | 0.0726 | 0.1755 |
-| Lead-3 | 0.2073 | 0.0594 | 0.1472 |
-
-SBERT+GCN mengalahkan semua baseline Lead-N: **+8.2% R1** vs Lead-2. Model 500K parameter mencapai 64.7% dari Oracle.
-
 ## Struktur Project
 
 ```
@@ -147,9 +135,6 @@ Konfigurasi optimal ditentukan melalui 6 eksperimen One-Factor-At-a-Time (OFAT) 
 | 5 | Scoring head | mlp | 0.2242 | +0.0022 |
 | 6 | Positional encoding | sinusoidal(16) | 0.2350 | +0.0108 |
 
-Kontributor terbesar: positional encoding (63.5%), threshold adaptive (17.1%), scoring MLP (12.9%).
-
-Ablation study menunjukkan GCN berkontribusi +0.0037 R1 (+1.6%) sebagai feature enhancer di atas representasi SBERT. Detail lengkap di [`docs/`](docs/).
 
 ## Referensi
 
