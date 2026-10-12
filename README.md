@@ -94,6 +94,7 @@ uv run python scripts/run_graph.py --dataset liputan6 --encoder mpnet --method h
 ### 3. Training
 
 ```bash
+#Experiment dengan num_layer=2
 uv run python scripts/run_training.py \
     --dataset xlsum \
     --encoder mpnet \
@@ -109,17 +110,46 @@ uv run python scripts/run_training.py \
     --pos_weight 11 \
     --selection_metric rouge1 \
     --label_metric rouge1
+
+#Experiment dengan num_layer=1
+uv run python scripts/run_training.py \
+    --dataset xlsum \
+    --encoder mpnet \
+    --threshold hybrid_tadaptive \
+    --num_layers 1 \
+    --hidden_dim 256 \
+    --residual outer \
+    --dropout 0.0 \
+    --scoring mlp \
+    --pos_method sinusoidal \
+    --pos_dim 16 \
+    --top_k 2 \
+    --pos_weight 11 \
+    --selection_metric rouge1 \
+    --label_metric rouge1
+
 ```
 
 ### 4. Evaluation
 
 ```bash
+# Evaluation Best Model with num_layers=2
 uv run python scripts/run_evaluation.py \
     --dataset xlsum \
     --encoder mpnet \
     --threshold hybrid_tadaptive \
     --top_k 2 \
     --checkpoint checkpoints/xlsum/sbert_gcn_10ep_1e-3_256_bs16_thybrid_tadaptive_Empnet_d00_Smlp_Psin16/best.pt
+
+# Evaluation Best Model with num_layers=1
+uv run python scripts/run_evaluation.py \
+    --dataset xlsum \
+    --encoder mpnet \
+    --threshold hybrid_tadaptive \
+    --top_k 2 \
+    --split val \
+    --checkpoint checkpoints/xlsum/sbert_gcn_10ep_1e-3_256_bs16_thybrid_tadaptive_Empnet_L1_d00_Smlp_Psin16/best.pt
+
 ```
 
 ## Eksperimen OFAT
