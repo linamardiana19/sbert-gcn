@@ -71,8 +71,13 @@ uv sync
 # Sentence splitting
 uv run python scripts/run_preprocessing.py --dataset xlsum
 
+# Sentence splitting
+uv run python scripts/run_preprocessing.py --dataset liputan6
+
 # Oracle labeling
 uv run python scripts/run_labeling.py --dataset xlsum
+
+uv run python scripts/run_labeling.py --dataset liputan6
 ```
 
 ### 2. Encoding & Graph Construction
@@ -83,12 +88,15 @@ uv run python scripts/run_encoding.py --dataset xlsum --encoder mpnet
 
 # Cosine similarity graph
 uv run python scripts/run_graph.py --dataset xlsum --encoder mpnet --method cosine --threshold adaptive
+uv run python scripts/run_graph.py --dataset liputan6 --encoder mpnet --method cosine --threshold adaptive
 
 # TF-IDF graph
 uv run python scripts/run_graph.py --dataset xlsum --encoder mpnet --method tfidf
+uv run python scripts/run_graph.py --dataset liputan6 --encoder mpnet --method tfidf
 
 # Hybrid union graph (cosine + TF-IDF)
 uv run python scripts/run_graph.py --dataset xlsum --encoder mpnet --method hybrid --threshold adaptive
+uv run python scripts/run_graph.py --dataset liputan6 --encoder mpnet --method hybrid --threshold adaptive
 ```
 
 ### 3. Training
