@@ -40,15 +40,6 @@ sbert-gcn/
 │   ├── analyze_lead.py       #   Lead-N baseline analysis
 │   ├── analyze_labels.py     #   Label distribution analysis
 │   └── analyze_similarity.py #   Similarity distribution analysis
-├── demo/                 # Demo aplikasi
-│   ├── backend/          #   FastAPI inference server
-│   └── frontend/         #   Web UI
-├── docs/                 # Dokumentasi penelitian
-│   ├── 01_analisis_masalah.md
-│   ├── 02_analisis_dataset.md
-│   ├── 03_perancangan_solusi.md
-│   ├── 04_hasil_eksperimen.md
-│   └── 05_analisis_kesimpulan.md
 ├── dataset/              # Data (tidak di-track git)
 ├── checkpoints/          # Model checkpoints (tidak di-track git)
 └── results/              # Hasil evaluasi (tidak di-track git)
