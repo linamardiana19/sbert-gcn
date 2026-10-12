@@ -134,7 +134,7 @@ Konfigurasi optimal ditentukan melalui 6 eksperimen One-Factor-At-a-Time (OFAT) 
 | 4a–d | GCN config | layers=2, dim=256, outer, dropout=0.0 | 0.2220 | +0.0003 |
 | 5 | Scoring head | mlp | 0.2242 | +0.0022 |
 | 6 | Positional encoding | sinusoidal(16) | 0.2350 | +0.0108 |
-| 7 | Jumlah Layer | num_layers=2 | 0.2362 | +0.0012 |
+| 7 | Jumlah Layer | num_layers=1 | 0.2362 | +0.0012 |
 
 
 ## Referensi
