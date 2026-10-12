@@ -134,15 +134,6 @@ uv run python scripts/run_evaluation.py \
     --checkpoint checkpoints/xlsum/sbert_gcn_10ep_1e-3_256_bs16_thybrid_tadaptive_Empnet_d00_Smlp_Psin16/best.pt
 ```
 
-### 5. Demo
-
-```bash
-# Start backend server
-uv run uvicorn demo.backend.app:app --reload
-
-# Buka demo/frontend/index.html di browser
-```
-
 ## Eksperimen OFAT
 
 Konfigurasi optimal ditentukan melalui 6 eksperimen One-Factor-At-a-Time (OFAT) pada validation set:
