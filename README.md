@@ -124,7 +124,7 @@ uv run python scripts/run_evaluation.py \
 
 ## Eksperimen OFAT
 
-Konfigurasi optimal ditentukan melalui 6 eksperimen One-Factor-At-a-Time (OFAT) pada validation set:
+Konfigurasi optimal ditentukan melalui 6 eksperimen One-Factor-At-a-Time (OFAT) pada validation set XLSum:
 
 | Eksperimen | Faktor | Terpilih | Val R1 | Delta |
 |------------|--------|----------|--------|-------|
