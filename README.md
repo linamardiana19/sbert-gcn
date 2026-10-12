@@ -85,6 +85,7 @@ uv run python scripts/run_labeling.py --dataset liputan6
 ```bash
 # SBERT encoding (pre-compute embeddings)
 uv run python scripts/run_encoding.py --dataset xlsum --encoder mpnet
+uv run python scripts/run_encoding.py --dataset liputan6 --encoder mpnet
 
 # Cosine similarity graph
 uv run python scripts/run_graph.py --dataset xlsum --encoder mpnet --method cosine --threshold adaptive
